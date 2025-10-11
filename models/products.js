@@ -1,18 +1,13 @@
-const mongoose = require("mongoose");
+const mongoose = require ("mongoose");
+//defiing the schema
+const productSchema = new mongoose.Schema({
+    name: {type: String, required:true},
+    description:{type:String, reuqired:true},
+    price:{type:Number, reuqired:true},
+    category:{type:String, required:true},
+    inStock:{type:Boolean,required:true}
+});
 
-// defining the schema - use MongoDB _id (ObjectId) as primary identifier
-const productSchema = new mongoose.Schema(
-    {
-        name: { type: String, required: true },
-        description: { type: String, required: true },
-        price: { type: Number, required: true },
-        category: { type: String, required: true },
-        inStock: { type: Boolean, default: true },
-    },
-    { timestamps: true }
-);
-
-// create the model
-const Products = mongoose.model("Product", productSchema);
-
-module.exports = Products;
+//create the model
+const Products1 =mongoose.model("Products1", productSchema)
+module.exports =Products1;
