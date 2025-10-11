@@ -166,13 +166,4 @@ Invoke-RestMethod -Method Delete -Uri "http://localhost:5000/products/<PRODUCT_I
 - The auth middleware expects the header `x-api-key` to exactly match `API_KEY` from your `.env`.
 - The repository's `package.json` does not include a `start` script. Use `node server.js` or add a script like `"start": "node server.js"` if you prefer `npm start`.
 
-If you'd like, I can add a helpful `start`/`dev` script to `package.json` and fix the `nodeman` vs `nodemon` typo — tell me if you want that change.
 
----
-
-Files referenced:
-
-- `server.js` — application entry
-- `routes/productRoutes.js` — product endpoints
-- `models/products.js` — product schema
-- `middleware/middle wareAuth.js` — API key middleware
